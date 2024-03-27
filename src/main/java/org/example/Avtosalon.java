@@ -8,8 +8,12 @@ import java.util.List;
 public class Avtosalon {
     private final List<Car> cars = new ArrayList<>();
 
+    public synchronized int count() {
+        return this.cars.size();
+    }
+
     public synchronized void get() {
-        while (this.cars.size() < 1) {
+        while (this.cars.isEmpty()) {
             try {
                 wait();
             } catch (InterruptedException e) {
