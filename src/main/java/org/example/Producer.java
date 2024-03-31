@@ -3,7 +3,7 @@ package org.example;
 public class Producer implements Runnable {
     Avtosalon avtosalon;
 
-    private static final int PRODUCTION_INTERVAL = 5;
+    private static final int PRODUCTION_INTERVAL = 1;
 
     Producer(Avtosalon avtosalon) {
         this.avtosalon = avtosalon;
